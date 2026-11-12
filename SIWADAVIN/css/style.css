@@ -1,0 +1,538 @@
+/*=========================================
+SIWA
+Sistem Informasi Wisata Indonesia
+Sprint 2 - CSS
+Versi: 1.3.0
+Episode 13: Menghubungkan CSS
+=========================================*/
+
+/*=========================================
+RESET CSS
+=========================================*/
+
+/*=========================================
+TYPOGRAPHY & BASE
+=========================================*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #333333;
+}
+/*=========================================
+HEADER
+=========================================*/
+.header {
+    background-color: #0f4c81; /* Biru Tua Elegan */
+    padding: 30px 20px; /* Atas-Bawah 30px, Kiri-Kanan 20px */
+    text-align: center; /* Rata Tengah */
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.site-title {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.site-tagline {
+    margin: 0;
+    font-size: 16px;
+    color: #dbeafe;
+}
+/*=========================================
+NAVIGATION
+=========================================*/
+.navbar {
+    background-color: #083358;
+    padding: 15px 20px;
+}
+.nav-list {
+    list-style: none; /* hapus bullet */
+    margin: 0;
+    padding: 0;
+    display: flex;/*konten rata horizontal*/
+    justify-content: center; /*konten tengah*/
+    gap: 30px; /*celah*/
+}
+
+.nav-item {
+    display: inline-block; /*menetapkan konten tetap sejajar*/
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none; /*menghilangkan garis bawah*/
+    font-size: 18px;
+    font-weight: bold; /*mengubah menjadi tebal*/
+    transition: 1,5s; /*perubahan selama 3dtk*/
+}
+
+.nav-link:hover {
+    color: #ffd16f;
+}
+/*=========================================
+HERO SECTION
+=========================================*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 8%;
+    background-color: #eaf4ff;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.hero-title {
+    font-size: 42px;
+    margin-bottom: 20px; /*jarak luar bawah*/
+    color: #0f4c81;
+    transition: all 0.5s ease;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1,6; /*jarak antar kata*/
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    padding: 12px 24px;
+    border: none; /*menghilangkan border*/
+    background-color: #0f4c81;
+    color: white;
+    font-size: 16px;
+    font-weight: bold; /*mengubah jenis huruf ketebalan*/
+    cursor: pointer; /*kursor berubah jafi petunjuk*/
+}
+
+.hero-button:hover {
+    background-color: #083358;
+}
+/*=========================================
+DESTINASI WISATA
+=========================================*/
+.destinations {
+    padding: 60px 8%;
+    background-color: #eaf4ff;
+}
+
+.destination-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*mengulang pembuatan 3 kolom*/
+    gap: 30px;
+}
+
+.destination-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden; /*mencegah konten bocor keluar*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /*memberi bayangan border*/
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-4px); /* mengangkat konten*/
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /*memberi bayangan lebih ketika hover*/
+}
+
+.destination-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /*memotong cerdas*/
+}
+
+.destination-title {
+    font-size: 22px;
+    margin: 16px 20px 8px ;
+    color: #0f4c81;
+}
+
+.destination-text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 20px 16px;
+    color: #64748b;
+}
+
+.btn-detail {
+    display: inline-block;
+    margin: 0 20px 20px;
+    padding: 10px 20px;
+    background-color: #0f4c81;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    background-color: #083358;
+}
+/*=========================================
+MEDIA WISATA
+=========================================*/
+.media {
+    padding: 60px 8%;
+    background-color: #eaf4ff;
+}
+
+.media-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.media-audio,
+.media-video,
+.media-map {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.media-audio h3,
+.media-video h3,
+.media-map h3 {
+    color: #0f4c81;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.audio-player {
+    width: 100%;
+}
+
+.video-player {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.map-frame {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 1;
+}
+/*=========================================
+KONTAK
+=========================================*/
+.contact {
+    padding: 60px 6%;
+    background-color: #eaf4ff;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-address,
+.contact-phone,
+.contact-email,
+.contact-hours {
+    flex: 1;
+    margin: 0;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 1.6
+}
+
+.contact-phone a,
+.contact-email a {
+    color: #0f4c81;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-phone a:hover,
+.contact-email a:hover {
+    color: #083358;
+    text-decoration: underline;
+}
+
+
+/*=========================================
+INFORMASI WISATA (TABLE)
+=========================================*/
+.information {
+    padding: 60px 8%;
+    background-color: #eaf4ff;
+}
+
+.table-title {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #0f4c81;
+    font-size: 24px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse; /* 🪄 GARIS MENYATU! */
+    background-color: white;
+}
+
+.info-table th,
+.info-table td {
+    padding: 15px;
+    border: 1px solid #d9e2ec;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: #0f4c81; /* Biru tua SIWA */
+    color: white;
+}
+
+.info-table tr:hover {
+    background-color: #eaf4ff; /* Biru sangat muda saat hover */
+}
+
+/*=========================================
+INFORMASI TAMBAHAN (LIST)
+=========================================*/
+.information-list { 
+    padding: 60px 8%; 
+    background-color: #eaf4ff;
+}
+
+.facility,
+.rules,
+.booking-step { 
+    margin-top: 30px; 
+    padding: 25px; 
+    background-color: #f5f7fa; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.list-title { 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    color: #0f4c81;
+    font-size: 24px;
+}
+
+.facility-list,
+.rules-list,
+.booking-list { 
+    margin: 0; 
+    padding-left: 25px;
+} 
+.facility-list li,
+.rules-list li,
+.booking-list li { 
+    margin-bottom: 10px; 
+    line-height: 1,6;
+}
+
+.facility-list li:last-child,
+.rules-list li:last-child,
+.booking-list li:last-child { 
+    margin-bottom: 0;
+}
+/*=========================================
+FORM PEMESANAN
+=========================================*/
+.booking {
+    padding: 60px 8%;
+    background-color: #eaf4ff;
+}
+
+.booking-form {
+    max-width: 700px; /*lebar maksimal*/
+    margin: 40px auto 0;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0f4c81;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d9e2ec;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /*mengikuti lebar width*/
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0f4c81;
+    box-shadow: 0 0 0 3px #dbeafe;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0f4c81;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #083358;
+}
+/*=========================================
+FOOTER
+=========================================*/
+footer {
+    padding: 50px 8%;
+    background-color: #083358;
+    color: white;
+    text-align: center;
+}
+
+.footer-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.footer-description {
+    margin-bottom: 15px;
+    color: #dbeafe;
+}
+
+.footer-copy {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #dbeafe;
+}
+
+.footer-subtitle {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-item {
+    display: inline-block;
+}
+
+.footer-links {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer-links:hover {
+    color: #ffd166;
+}
+/*=========================================
+RESPONSIVE DESIGN (Episode 26)
+=========================================*/
+@media (max-width: 768px) {
+    /* HEADER */
+    .header {
+        padding: 25px 15px; /* Padding lebih kecil di mobile */
+    }
+    .site-title {
+        font-size: 32px;
+    }
+    .site-tagline {
+        font-size: 16px;
+    }
+
+    /* NAVIGATION */
+    .nav-list {
+        flex-direction: column; /* 🪄 Horizontal → VERTICAL! */
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column; /* Teks atas, gambar bawah */
+        padding: 40px 6%;
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 32px;
+    }
+
+    /* DESTINASI & MEDIA */
+    .destination-list,
+    .media-content {
+        grid-template-columns: 1fr;
+    }
+    /* KONTAK & FOOTER */
+    .contact-content,
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* FORM */
+    .booking-form {
+        padding: 20px; /* Padding lebih kecil di mobile */
+    }
+}
+.judul-highlight {
+    background-color: #ffd166;
+    color: #083358;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.card-active {
+    background-color: #eaf4ff;
+    border: 2px solid #0f4c81;
+    transform: translateY(-8px);
+}
